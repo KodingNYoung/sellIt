@@ -6,6 +6,7 @@ import {
   View,
   Image
 } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
 
@@ -13,8 +14,12 @@ const ViewImage = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.topBar}>
-        <View style={[styles.topBarBtn, styles.closeBtn]} />
-        <View style={[styles.topBarBtn, styles.deleteBtn]} />
+        <MaterialCommunityIcons name="close" color={colors.white} size={30} />
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          color={colors.white}
+          size={30}
+        />
       </View>
       <View style={styles.imageView}>
         <Image
@@ -36,18 +41,8 @@ const styles = StyleSheet.create({
   topBar: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 30,
-    paddingVertical: 10
-  },
-  topBarBtn: {
-    width: 50,
-    height: 50
-  },
-  closeBtn: {
-    backgroundColor: colors.primary
-  },
-  deleteBtn: {
-    backgroundColor: colors.secondary
+    paddingHorizontal: 20,
+    paddingTop: 30
   },
   imageView: {
     flex: 1

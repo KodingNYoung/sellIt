@@ -7,8 +7,7 @@ import {
   StatusBar,
   ImageBackground
 } from "react-native";
-
-import colors from "../config/colors";
+import AppButton from "../components/AppButton/AppButton";
 
 export default function Welcome() {
   return (
@@ -16,13 +15,20 @@ export default function Welcome() {
       source={require("../assets/background.jpg")}
       resizeMode="cover"
       style={styles.background}
+      blurRadius={10}
     >
       <View style={styles.logoView}>
         <Image source={require("../assets/logo-red.png")} style={styles.logo} />
-        <Text>Sell What You Don't Need</Text>
+        <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
-      <View style={[styles.actionActionView, styles.redView]}></View>
-      <View style={[styles.actionActionView, styles.greenView]}></View>
+      <View style={styles.buttonsContainer}>
+        <AppButton title="Login" onPress={() => alert("Login?")} />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => alert("Register?")}
+        />
+      </View>
     </ImageBackground>
   );
 }
@@ -40,15 +46,13 @@ const styles = StyleSheet.create({
   logo: {
     width: 100,
     height: 100,
-    marginBottom: 10
+    marginBottom: 15
   },
-  actionActionView: {
-    height: 70
+  tagline: {
+    fontSize: 25,
+    fontWeight: "bold"
   },
-  redView: {
-    backgroundColor: colors.primary
-  },
-  greenView: {
-    backgroundColor: colors.secondary
+  buttonsContainer: {
+    padding: 15
   }
 });
