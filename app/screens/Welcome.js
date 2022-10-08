@@ -36,7 +36,7 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   logoView: {
     flexGrow: 1,

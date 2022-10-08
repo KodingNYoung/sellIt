@@ -14,10 +14,10 @@ export default function App() {
       {/* <Welcome /> */}
       {/* <ViewImage /> */}
       {/* <Listings /> */}
-      {/* <Messages /> */}
+      <Messages />
       {/* <ListingDetails /> */}
       {/* <Account /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <Test /> */}
     </AppSafeScreen>
   );

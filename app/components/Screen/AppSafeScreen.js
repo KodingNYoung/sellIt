@@ -9,8 +9,8 @@ const AppSafeScreen = props => {
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Constants.statusBarHeight,
-    flex: 1
+    // paddingTop: Constants.statusBarHeight,
+    flex: 1,
   }
 });
 export default AppSafeScreen;

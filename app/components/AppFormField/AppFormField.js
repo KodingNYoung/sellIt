@@ -14,7 +14,10 @@ export default function AppFormField(props) {
         visible: touched[name],
         error: errors[name]
       }}
-      onBlur={() => setFieldTouched(name)}
+      onBlur={evt => {
+        console.log({ evt });
+        setFieldTouched(name);
+      }}
       {...restProps}
     />
   );
